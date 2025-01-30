@@ -2,27 +2,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #fff;
-  background: #1e293b;
+  color: #333;
+  background: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+  animation: fadeIn 2s;
+}
+li{
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
+  color: wheat;
+  animation: slideIn 2s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .navbar {
-  background: #2f3e53;
+  background-color: rgb(1, 1, 62);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: white;
   position: fixed;
   width: 100%;
   top: 0;
+  animation: slideDown 2s;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .navbar .container {
@@ -34,7 +74,12 @@ body {
 .logo {
   font-size: 24px;
   font-weight: 600;
-  color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #2ecc71;
 }
 
 .nav-links {
@@ -45,62 +90,113 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2ecc71;
 }
 
 .hero {
   padding: 120px 0 60px;
   text-align: center;
-  background: #2f3e53;
+  background: linear-gradient(to bottom, #3498db, #2ecc71);
+  animation: zoomIn 2s;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .hero h1 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #333;
+  animation: bounceIn 2s;
+}
+
+@keyframes bounceIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .section {
   padding: 60px 0;
-  background: #2f3e53;
+  background: linear-gradient(to bottom, #3498db, #2ecc71);
   margin-bottom: 20px;
+  animation: fadeIn 2s;
 }
 
 .section h2 {
   font-size: 32px;
   margin-bottom: 30px;
   text-align: center;
-  color: #fff;
+  color: #333;
+  animation: slideIn 2s;
 }
 
 .skills-grid, .projects-grid, .contact-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  animation: zoomIn 2s;
 }
 
 .skill-item, .project-card, .contact-item {
   padding: 20px;
-  background: #2f3e53;
+  background: linear-gradient(to bottom, #3498db, #2ecc71);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover, .project-card:hover, .contact-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .skill-item i {
   font-size: 32px;
-  color: #fff;
+  color: #333;
   margin-bottom: 10px;
+  animation: bounceIn 2s;
 }
 
 footer {
-  background: #1e293b;
-  color: #fff;
+  background: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+  color: #333;
   padding: 20px 0;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  animation: slideUp 2s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
